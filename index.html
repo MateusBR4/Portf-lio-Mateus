@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfólio | Mateus</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+
+        <img src="img/LEVY.jpg" alt="Foto de Mateus Da Silva Alves" class="foto-perfil">
+        <h1>Mateus Da Silva Alves</h1>
+        <p class="cabecalho-sub-titulo">DESENVOLVEDOR FRONT END</p>
+
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Sou um ex-estoquista de uma empresa de informática e migrei para a área de programação durante o desemprego, busco cada vez mais por conhecimento e tenho uma enorme e grande vontade de aprender.
+                Atualmente sei programar em HTML, CSS, TAILWIND CSS E JAVASCRIPT tendo desenvolvidos vários projetos que estão logo abaixo, ALÉM DE UTITLIZAR E CONSUMIR APIs e desenvolver um projeto utilizando n8n, criando assim uma automação pra um site que cria animações. Faço Freelancer e também estou aberto a oportunidades de vagas de emprego!
+                Esse site por si só já é um grande projeto.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <a href="file:///C:/Users/Mateus/Desktop/Conversor%20Levy&N%C3%ADke/index.html" target="_blank"><img src="./img/Conversor de Moedas.png" alt="Conversor de Moedas" class="projetos-imagem"></a>
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Conversor de Moedas</h3>
+                    <p class="paragrafo-projetos">Conversor de Moedas (sobre)</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <a href="file:///C:/Users/Mateus/Desktop/Criador%20M%C3%A1gico%20Levy&N%C3%ADke/index.html" target="_blank"><img src="./img/Criador Mágico de Animações.png" alt="Criador Mágico de Animações"
+                    class="projetos-imagem"></a>
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Criador Mágico de Animações</h3>
+                    <p class="paragrafo-projetos">Criador Mágico de Animações (sobre)</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <a href="file:///C:/Users/Mateus/Desktop/Pok%C3%A9dex%20Levy&N%C3%ADke/index.html" target="_blank"><img src="./img/Pokédex.png" alt="Pokédex" class="projetos-imagem"></a>
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Pokédex</h3>
+                    <p class="paragrafo-projetos">Pokédex (sobre)</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulos">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        </form>
+
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5531996365207'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
+
+            window.open(url, '_blank')
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
